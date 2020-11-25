@@ -3,8 +3,11 @@ import ReactDOM from "react-dom";
 import TodoForm from "./todoForm";
 import TodoHeader from "./todoHeader";
 import TodoList from "./todoList";
-import '../styles/App.css';
-import 'bootstrap/dist/css/bootstrap.css';
+import "../styles/app.css";
+import "bootstrap/dist/css/bootstrap.css";
+import "../../node_modules/font-awesome/css/font-awesome.min.css";
+
+
 
 /*
 Todo app structure
@@ -26,7 +29,6 @@ todoItems.push({index: 3, value: "task 3", done: true});
 class App extends React.Component {
   constructor (props) {
     super(props);
-     //Привязка методов из прототипа к конкретному экземпляру
     this.addItem = this.addItem.bind(this);
     this.removeItem = this.removeItem.bind(this);
     this.markTodoDone = this.markTodoDone.bind(this);

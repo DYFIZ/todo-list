@@ -15,13 +15,17 @@ class TodoListItem extends React.Component {
       this.props.markTodoDone(index);
     }
     render () {
-      var todoClass = this.props.item.done ? "done" : "undone";
+      var todoClass = this.props.item.done ? "done d-flex" : "undone d-flex";
       return(
         <li className="list-group-item ">
           <div className={todoClass}>
-            <span className="glyphicon glyphicon-ok icon" aria-hidden="true" onClick={this.onClickDone}></span>
-            {this.props.item.value}
-            <button type="button" className="close" onClick={this.onClickClose}>&times;</button>
+            <div className="taskText">{this.props.item.value}</div>
+            <div className="panel-btn d-flex p-2 bd-highlight justify-content-end">
+                <input className="close" type="checkbox" onClick={this.onClickDone}/>
+                <span className="icon">{"status"}</span>
+                <span><i className="fa fa-pencil-square-o icon" aria-hidden="true"></i></span>
+                <span><i className="fa fa-trash close" aria-hidden="true"  onClick={this.onClickClose}></i></span>
+            </div>
           </div>
         </li>     
       );
