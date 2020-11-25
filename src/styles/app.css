@@ -1,7 +1,6 @@
 html, body {
     height: 100%;
     color: #61DAFB;
-    background: #2D2D2D;
   }
   
   h1 {
@@ -31,14 +30,35 @@ html, body {
   }
   
   .done {
-    color: red;
+    color: pink;
     text-decoration: line-through;
   }
   
   .undone {
-    color: #61DAFB;
+    color: green;
   }
   
-  .icon {
-    margin: 6px 10px 6px 0;
+  .panel-btn{
+    width:90%;
   }
+
+  .icon {
+    display: inline-flex;
+    float:right;
+    margin: 0px 10px 0px 6px;
+    height:10px;
+    align-items: center;
+    color:#000;
+    opacity: .5;
+  }
+
+  .taskText{
+    max-width: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+ 
+
+
+ 
